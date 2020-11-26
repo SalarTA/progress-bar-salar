@@ -12,3 +12,22 @@
     color: black;
     font-weight: bold;
   }
+  
+@media (max-width: 950px){
+  .ContainerStyles {
+    height: 30px;
+  }
+  .LabelStyles {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 670px){
+  .ContainerStyles {
+    height: 20px;
+  }
+  .LabelStyles {
+    padding: 4px;
+    font-size: 10px;
+  }
+}

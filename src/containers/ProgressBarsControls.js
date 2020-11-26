@@ -10,24 +10,6 @@ class ProgressBarsControls extends Component {
         progressBarIndex: 0
     }
 
-    // state= {
-    //     progressBarsControls: {
-    //         "buttons": [
-    //             10,
-    //             38,
-    //             -13,
-    //             -18
-    //         ],
-    //         "bars": [
-    //             62,
-    //             45,
-    //             62
-    //         ],
-    //         "limit": 230
-    //     },
-    //     progressBarIndex: 0
-    // }
-
     componentDidMount() {
         axios.get('http://pb-api.herokuapp.com/bars')
             .then(response => {

@@ -15,3 +15,28 @@
 .ProgressBarControl:active {
     background-color: rgb(193, 194, 196);
 }
+
+@media (max-width: 950px){
+    .ProgressBarControl {
+        width: 100px;
+        padding: 8px;
+        margin: 15px;
+        font-size: 12px;
+    }
+}
+@media (max-width: 670px){
+    .ProgressBarControl {
+        width: 80px;
+        padding: 6px;
+        margin: 10px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 520px){
+    .ProgressBarControl {
+        width: 70px;
+        padding: 4px;
+        margin: 10px;
+        font-size: 8px;
+    }
+}
