@@ -1,0 +1,14 @@
+.ContainerStyles {
+    height: 40px;
+    width: 80%;
+    background-color: #e0e0de;
+    border-radius: 15px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+.LabelStyles {
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+  }
