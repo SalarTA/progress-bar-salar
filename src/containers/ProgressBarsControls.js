@@ -1,27 +1,42 @@
 import React, {Component} from 'react';
 import ProgressBar from '../components/ProgressBar/ProgressBar';
+import axios from 'axios';
 import ProgressControl from '../components/ProgressControl/ProgressControl';
 import classes from './ProgressBarsControls.css';
 
 class ProgressBarsControls extends Component {
-    state= {
-        progressBarsControls: {
-            "buttons": [
-                10,
-                38,
-                -13,
-                -18
-            ],
-            "bars": [
-                62,
-                45,
-                62
-            ],
-            "limit": 230
-        },
+    state = {
+        progressBarsControls: null,
         progressBarIndex: 0
     }
 
+    // state= {
+    //     progressBarsControls: {
+    //         "buttons": [
+    //             10,
+    //             38,
+    //             -13,
+    //             -18
+    //         ],
+    //         "bars": [
+    //             62,
+    //             45,
+    //             62
+    //         ],
+    //         "limit": 230
+    //     },
+    //     progressBarIndex: 0
+    // }
+
+    componentDidMount() {
+        axios.get('http://pb-api.herokuapp.com/bars')
+            .then(response => {
+                this.setState({progressBarsControls: response.data});
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
 
     progressBarUpdateHandler = (index) => {
         const progress = {...this.state.progressBarsControls};
